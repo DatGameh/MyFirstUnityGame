@@ -5,7 +5,7 @@ public class csDemoScenceControl : MonoBehaviour {
 
     public GameObject[] AllEffect;
     int i;
-    public GUIText Text;
+    // public GUIText Text;
     public Transform mg;
     GameObject MakedObject;
 
@@ -13,7 +13,7 @@ public class csDemoScenceControl : MonoBehaviour {
     {
         i = 1;
         MakedObject = Instantiate(AllEffect[i - 1], AllEffect[i - 1].transform.position, Quaternion.identity) as GameObject;
-        Text.text = "("+(i)+"/"+AllEffect.Length+") "+AllEffect[i-1].name;
+        // Text.text = "("+(i)+"/"+AllEffect.Length+") "+AllEffect[i-1].name;
     }
 
     void Update()
@@ -26,7 +26,7 @@ public class csDemoScenceControl : MonoBehaviour {
                 i = 1;
             Destroy(MakedObject);
             MakedObject = Instantiate(AllEffect[i - 1], AllEffect[i - 1].transform.position, AllEffect[i-1].transform.rotation) as GameObject;
-            Text.text = "(" + i + "/" + AllEffect.Length + ") " + AllEffect[i-1].name;
+            // Text.text = "(" + i + "/" + AllEffect.Length + ") " + AllEffect[i-1].name;
 
         }
 
@@ -38,7 +38,7 @@ public class csDemoScenceControl : MonoBehaviour {
                 i = AllEffect.Length;
             Destroy(MakedObject);
             MakedObject = Instantiate(AllEffect[i - 1], AllEffect[i - 1].transform.position, AllEffect[i - 1].transform.rotation) as GameObject;
-            Text.text = "(" + i + "/" + AllEffect.Length + ") " + AllEffect[i-1].name;
+            // Text.text = "(" + i + "/" + AllEffect.Length + ") " + AllEffect[i-1].name;
 
         }
 
@@ -46,7 +46,7 @@ public class csDemoScenceControl : MonoBehaviour {
         {
             Destroy(MakedObject);
             MakedObject = Instantiate(AllEffect[i - 1], AllEffect[i - 1].transform.position, AllEffect[i - 1].transform.rotation) as GameObject;
-            Text.text = "(" + i + "/" + AllEffect.Length + ") " + AllEffect[i-1].name;
+            // Text.text = "(" + i + "/" + AllEffect.Length + ") " + AllEffect[i-1].name;
 
         }
     }
